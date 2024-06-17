@@ -9,7 +9,6 @@ router.get('/orders', authController.isLoggedIn, managerController.orders);
 router.get('/update/:email', authController.isLoggedIn, managerController.update);
 router.get('/delete/:email', authController.isLoggedIn, managerController.delete);
 router.post('/addnewproduct', authController.isLoggedIn, managerController.addnewproduct);
-router.post('/addnewproductexcel', authController.isLoggedIn, managerController.addnewproductexcel);
 
 
 router.get("/productembed", authController.isLoggedIn, (req, res) => {

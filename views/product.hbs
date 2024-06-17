@@ -15,7 +15,6 @@
         <div class="btn-group btn-group-justified btn-group-lg">
             <a href="/product/crud" class="btn btn-primary">Product CRUD</a>
             <a href="/product/addproduct" class="btn btn-primary">Add product</a>
-            <a href="/product/addproductexcel" class="btn btn-primary">Add product from Excel file</a>
         </div>
     </center>
 
@@ -43,16 +42,6 @@
 
             <button type="submit" class="btn btn-primary">Add</button>
         </form>
-    {{/if}}
-
-    {{#if addproductexcel}}
-        <center>
-            <form ref='uploadForm' id='uploadForm' action='/manager/addnewproductexcel' method='post' encType="multipart/form-data">
-                <input type="file" name="sampleFile" />
-                <input type='submit' value='Upload!' />
-            </form>
-        </center>
-        
     {{/if}}
 
     {{#if crud}}

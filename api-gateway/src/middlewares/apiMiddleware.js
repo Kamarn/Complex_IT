@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const mysql = require('mysql');
 const { promisify } = require('util');
-require('dotenv').config({ path: '../../.env' });
+require('dotenv').config();
 
 const jwt_pass = 'cookiepass';
 

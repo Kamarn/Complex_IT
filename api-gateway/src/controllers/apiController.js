@@ -23,7 +23,14 @@ exports.display = async (req, res, next) => {
             console.log(error);
         }
 
-        res.render('index', { products: result, user: req.user });
+        usertype = req.usertype;
+
+        if( usertype == "customer" ){
+            res.render('index', { products: result, user: req.user, isCustomer: true });
+        }
+        else{
+            res.render('index', { products: result, user: req.user });
+        }
     });
 }
 

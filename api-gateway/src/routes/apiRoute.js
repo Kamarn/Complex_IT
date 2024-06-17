@@ -1,11 +1,13 @@
 const express = require('express');
 const authController = require('../middlewares/apiMiddleware');
 const productController = require('../controllers/apiController');
+const { chatWithGPT } = require('../controllers/chatController');
 const router = express.Router();
   
 router.get('/', authController.isLoggedIn, productController.display);
 router.get('/productinfo/:productName', authController.isLoggedIn, productController.productinfo);
 
+router.post('/chat', authController.isLoggedIn, chatWithGPT);
 
 router.get("/login", (req, res) => {
     res.render("login");

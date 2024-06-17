@@ -128,6 +128,7 @@ exports.isLoggedIn = async (req, res) => {
                     return res.json({ isAuthenticated: false });
                 }
                 req.user = results[0];
+                
                 return res.json({ isAuthenticated: true, user: req.user });
             });
         } catch (error) {

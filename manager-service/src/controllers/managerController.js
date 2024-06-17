@@ -199,43 +199,6 @@ exports.addnewproduct = (req, res) => {
 
 }
 
-exports.addnewproductexcel = (req, res) => {
-
-    if( (req.user) && req.usertype == 'manager' ) {
-        
-        const file = reader.readFile('/../../../public/' + req.files.sampleFile.name)
-
-        let data = []
-        
-        const sheets = file.SheetNames
-        
-        for(let i = 0; i < sheets.length; i++)
-        {
-            const temp = reader.utils.sheet_to_json(
-            file.Sheets[file.SheetNames[i]])
-            temp.forEach((res) => {
-            data.push(res)
-        })
-        }
-       
-        for(let i = 0; i < data.length; i++){
-            productDB.query("INSERT INTO Product (productName, productPrice, productQuantity, productImage) VALUES ('"+data[i].productName+"', '"+data[i].productPrice+"', '"+data[i].productQuantity+"', '"+data[i].productImage+"')", (error, result) => {
-                if(error){
-                    console.log(error);
-                }
-            });
-        }
-        res.render('product', {
-            messageSuccess: 'Products added',
-            user: req.user
-        }); 
-
-    } else {
-        res.redirect('/login');
-    }
-
-}
-
 exports.orders = (req, res) => {
 
     if( (req.user) && req.usertype == 'manager' ) {
