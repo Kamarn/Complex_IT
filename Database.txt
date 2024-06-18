@@ -11,7 +11,7 @@ create table Users(
 
 insert into Users values(1, 'Manager', 'Manager@company.com', '$2a$08$4zycBiyk0YdoADUZRZBw0OEMITcUKOKmCattaRtRBK/uHrO9l/h2O', 'manager');
 insert into Users values(2, 'Worker', 'Worker@company.com', '$2a$08$ENLoHw1GzGX1Epu.wa8I5utOuyp1Arz6.3T6aDCkEadSEwOUc7s32', 'worker');
-insert into Users values(2, 'Customer', 'Customer@company.com', '$2a$08$sqp8i5XFDqK5Wy5lZQNhy..Uvejh5uV9RsCPshm7LEzy7.f.YlKsq', 'customer');
+insert into Users values(3, 'Customer', 'Customer@company.com', '$2a$08$sqp8i5XFDqK5Wy5lZQNhy..Uvejh5uV9RsCPshm7LEzy7.f.YlKsq', 'customer');
 
 create database products;
 use products;
