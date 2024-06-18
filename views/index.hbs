@@ -26,6 +26,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background-color: white;
             flex-direction: column;
+            resize: both;
+            overflow: hidden;
         }
 
         #chatboxHeader {
@@ -35,6 +37,7 @@
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             cursor: pointer;
+            user-select: none;
         }
 
         #chatboxMessages {
@@ -110,10 +113,10 @@
     {{#if isCustomer}}
         <div id="chatbotContainer">
             <div id="chatbox">
-                <div id="chatboxHeader" onclick="toggleChatbox()">Chat with us!</div>
+                <div id="chatboxHeader" onmousedown="startResize(event)">Chat with us!</div>
                 <div id="chatboxMessages"></div>
                 <div id="chatboxInput">
-                    <input type="text" id="userInput" placeholder="Type your message here..." onkeydown="handleKeyPress(event)" />
+                    <input type="text" id="userInput" placeholder="Type your message here..." />
                     <button onclick="sendMessage()">Send</button>
                 </div>
             </div>
@@ -124,24 +127,17 @@
     {{/if}}
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const chatbox = document.getElementById('chatbox');
-            chatbox.style.display = 'none';
-        });
+
+        let isChatboxVisible = false;
 
         function toggleChatbox() {
             const chatbox = document.getElementById('chatbox');
-            if (chatbox.style.display === 'none') {
-                chatbox.style.display = 'flex';
-            } else {
+            if (isChatboxVisible) {
                 chatbox.style.display = 'none';
+            } else {
+                chatbox.style.display = 'flex';
             }
-        }
-
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
+            isChatboxVisible = !isChatboxVisible;
         }
 
         async function sendMessage() {
@@ -159,6 +155,28 @@
             const data = await response.json();
             chatboxMessages.innerHTML += `<p><strong>Bot:</strong> ${data.message}</p>`;
             chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+        }
+
+        document.getElementById('userInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function startResize(event) {
+            window.addEventListener('mousemove', resizeChatbox);
+            window.addEventListener('mouseup', stopResize);
+        }
+
+        function resizeChatbox(event) {
+            const chatbox = document.getElementById('chatbox');
+            chatbox.style.width = screen.width - event.clientX - chatbox.offsetLeft + 'px';
+            chatbox.style.height = screen.height - event.clientY - chatbox.offsetTop + 'px';
+        }
+
+        function stopResize(event) {
+            window.removeEventListener('mousemove', resizeChatbox);
+            window.removeEventListener('mouseup', stopResize);
         }
     </script>
 </body>
