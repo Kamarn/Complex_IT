@@ -1,0 +1,8 @@
+.env
+api-gateway/.env
+auth-service/.env
+cart-service/.env
+customer-service/.env
+manager-service/.env
+product-service/.env
+worker-service/.env

@@ -1,0 +1,104 @@
+{
+    "options": {
+        "method": "get",
+        "path": "/threads/thread_oA0anWNMG82lVUCPWkc76Z4V/messages",
+        "query": {},
+        "headers": {
+            "OpenAI-Beta": "assistants=v2"
+        }
+    },
+    "response": {
+        "size": 0,
+        "timeout": 0
+    },
+    "body": {
+        "object": "list",
+        "data": [
+            {
+                "id": "msg_EHKdi0vO9IjivaoWxviIiDGK",
+                "object": "thread.message",
+                "created_at": 1718712918,
+                "assistant_id": "asst_wGA3qiDGK1OE0VaujzHyJwEP",
+                "thread_id": "thread_oA0anWNMG82lVUCPWkc76Z4V",
+                "run_id": "run_gDxhoZcMAvuEaB7aF0eIxj3p",
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "value": "Dear customer,\n\nCertainly! The best Android phone for you will depend on your specific needs and preferences. Here are some recommendations across different categories:\n\n### Premium Range:\n1. **Samsung Galaxy S21 Ultra**\n   - **Features:** 6.8-inch AMOLED display, Exynos 2100/Snapdragon 888, up to 16GB RAM, up to 512GB storage, quad-camera setup.\n   - **Pros:** Excellent camera performance, impressive display, and robust build quality.\n\n2. **Google Pixel 6 Pro**\n   - **Features:** 6.71-inch AMOLED display, Google Tensor chip, up to 12GB RAM, up to 512GB storage, triple-camera setup.\n   - **Pros:** Outstanding camera quality, pure Android experience, and timely updates.\n\n### Mid-Range:\n1. **Samsung Galaxy A52 5G**\n   - **Features:** 6.5-inch Super AMOLED display, Snapdragon 750G, up to 8GB RAM, up to 256GB storage, quad-camera setup.\n   - **Pros:** Good camera system, 120Hz refresh rate display, and solid performance.\n\n2. **OnePlus Nord 2**\n   - **Features:** 6.43-inch Fluid AMOLED display, MediaTek Dimensity 1200-AI, up to 12GB RAM, up to 256GB storage, triple-camera setup.\n   - **Pros:** Excellent performance, fast charging, and clean software experience.\n\n### Budget Range:\n1. **Moto G Power (2021)**\n   - **Features:** 6.6-inch IPS LCD display, Snapdragon 662, up to 4GB RAM, up to 64GB storage, triple-camera setup.\n   - **Pros:** Affordable, great battery life, and decent performance for everyday tasks.\n\n2. **Xiaomi Redmi Note 10**\n   - **Features:** 6.43-inch Super AMOLED display, Snapdragon 678, up to 6GB RAM, up to 128GB storage, quad-camera setup.\n   - **Pros:** Good display quality, solid battery life, and value for money.\n\n### Things to Consider:\n- **Performance:** Ensure the phone has a good processor and enough RAM for your usage.\n- **Camera:** Look for phones with better camera systems if photography is important.\n- **Battery Life:** Consider phones with larger battery capacities and fast charging.\n- **Software:** Some brands offer a cleaner or more frequently updated Android experience.\n\nPlease let us know your specific needs or any other preferences to help narrow down the choices further.\n\nBest regards.",
+                            "annotations": []
+                        }
+                    }
+                ],
+                "attachments": [],
+                "metadata": {}
+            },
+            {
+                "id": "msg_Lvf3jZGyMADzdTpo5RKpIYj2",
+                "object": "thread.message",
+                "created_at": 1718712917,
+                "assistant_id": null,
+                "thread_id": "thread_oA0anWNMG82lVUCPWkc76Z4V",
+                "run_id": null,
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "value": "Hello. I want to buy an android phone. What can you recommend?",
+                            "annotations": []
+                        }
+                    }
+                ],
+                "attachments": [],
+                "metadata": {}
+            }
+        ],
+        "first_id": "msg_EHKdi0vO9IjivaoWxviIiDGK",
+        "last_id": "msg_Lvf3jZGyMADzdTpo5RKpIYj2",
+        "has_more": false
+    },
+    "data": [
+        {
+            "id": "msg_EHKdi0vO9IjivaoWxviIiDGK",
+            "object": "thread.message",
+            "created_at": 1718712918,
+            "assistant_id": "asst_wGA3qiDGK1OE0VaujzHyJwEP",
+            "thread_id": "thread_oA0anWNMG82lVUCPWkc76Z4V",
+            "run_id": "run_gDxhoZcMAvuEaB7aF0eIxj3p",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "text",
+                    "text": {
+                        "value": "Dear customer,\n\nCertainly! The best Android phone for you will depend on your specific needs and preferences. Here are some recommendations across different categories:\n\n### Premium Range:\n1. **Samsung Galaxy S21 Ultra**\n   - **Features:** 6.8-inch AMOLED display, Exynos 2100/Snapdragon 888, up to 16GB RAM, up to 512GB storage, quad-camera setup.\n   - **Pros:** Excellent camera performance, impressive display, and robust build quality.\n\n2. **Google Pixel 6 Pro**\n   - **Features:** 6.71-inch AMOLED display, Google Tensor chip, up to 12GB RAM, up to 512GB storage, triple-camera setup.\n   - **Pros:** Outstanding camera quality, pure Android experience, and timely updates.\n\n### Mid-Range:\n1. **Samsung Galaxy A52 5G**\n   - **Features:** 6.5-inch Super AMOLED display, Snapdragon 750G, up to 8GB RAM, up to 256GB storage, quad-camera setup.\n   - **Pros:** Good camera system, 120Hz refresh rate display, and solid performance.\n\n2. **OnePlus Nord 2**\n   - **Features:** 6.43-inch Fluid AMOLED display, MediaTek Dimensity 1200-AI, up to 12GB RAM, up to 256GB storage, triple-camera setup.\n   - **Pros:** Excellent performance, fast charging, and clean software experience.\n\n### Budget Range:\n1. **Moto G Power (2021)**\n   - **Features:** 6.6-inch IPS LCD display, Snapdragon 662, up to 4GB RAM, up to 64GB storage, triple-camera setup.\n   - **Pros:** Affordable, great battery life, and decent performance for everyday tasks.\n\n2. **Xiaomi Redmi Note 10**\n   - **Features:** 6.43-inch Super AMOLED display, Snapdragon 678, up to 6GB RAM, up to 128GB storage, quad-camera setup.\n   - **Pros:** Good display quality, solid battery life, and value for money.\n\n### Things to Consider:\n- **Performance:** Ensure the phone has a good processor and enough RAM for your usage.\n- **Camera:** Look for phones with better camera systems if photography is important.\n- **Battery Life:** Consider phones with larger battery capacities and fast charging.\n- **Software:** Some brands offer a cleaner or more frequently updated Android experience.\n\nPlease let us know your specific needs or any other preferences to help narrow down the choices further.\n\nBest regards.",
+                        "annotations": []
+                    }
+                }
+            ],
+            "attachments": [],
+            "metadata": {}
+        },
+        {
+            "id": "msg_Lvf3jZGyMADzdTpo5RKpIYj2",
+            "object": "thread.message",
+            "created_at": 1718712917,
+            "assistant_id": null,
+            "thread_id": "thread_oA0anWNMG82lVUCPWkc76Z4V",
+            "run_id": null,
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": {
+                        "value": "Hello. I want to buy an android phone. What can you recommend?",
+                        "annotations": []
+                    }
+                }
+            ],
+            "attachments": [],
+            "metadata": {}
+        }
+    ]
+}
